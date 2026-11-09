@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>knitup 뜨개동네 · 우리 동네 뜨개 친구</title>
+<meta name="description" content="지도에서 가까운 뜨개인을 만나고, 같이 뜰 모임을 열고, 내 뜨개 단계를 확인하세요. knitup이 만든 동네 뜨개 커뮤니티.">
+<meta name="theme-color" content="#3E6B48">
+<meta property="og:type" content="website">
+<meta property="og:title" content="knitup 뜨개동네 · 우리 동네 뜨개 친구">
+<meta property="og:description" content="지도에서 가까운 뜨개인을 만나고, 같이 뜰 모임을 열고, 내 뜨개 단계를 확인하세요.">
+<meta property="og:locale" content="ko_KR">
+<link rel="preload" href="fonts/Teolsil-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&amp;display=swap">
+<style>
+@font-face{font-family:"Teolsil";src:url(fonts/Teolsil-Bold.woff2) format("woff2");font-weight:700;font-display:swap}
+body{margin:0;background:#F3F1EA}
+a{color:#3E6B48}a:hover{color:#22362A}
+details summary{cursor:pointer;list-style:none}
+details summary::-webkit-details-marker{display:none}
+header{position:sticky;top:0;z-index:20}
+html{scroll-behavior:smooth}
+[id]{scroll-margin-top:80px}
+#download{scroll-margin-top:120px}
+.hdr-nav a{color:#DDE8D6;text-decoration:none;padding:8px 12px;border-radius:999px}
+.hdr-nav a:hover{color:#FFFFFF;background:rgba(243,241,234,.1)}
+.hdr-sheet{display:none}
+.hdr-sheet a{display:flex;align-items:center;min-height:52px;padding:0 4px;color:#22362A;text-decoration:none;font-size:17px;font-weight:500;border-bottom:1px solid #E2DFD5}
+@media (max-width:860px){
+.hdr-in{padding:0 8px 0 16px !important;height:56px !important;gap:12px !important}
+.hdr-nav{display:none !important}
+.hdr-burger{display:inline-flex !important;margin-left:auto !important}
+.hdr-sheet{display:block}
+}
+@media (max-width:720px){
+#top{padding:28px 16px 0 !important}
+.hero-tx{padding-bottom:8px !important}
+#top > div{gap:28px !important}
+.hero-tx > p:first-child{font-size:13px !important}
+#download{flex-direction:column}
+#download a{justify-content:center;width:100%}
+.phone{width:250px !important;height:420px !important;border-width:8px !important;border-radius:36px 36px 0 0 !important}
+.sec{padding:0 16px 56px !important}
+#features{padding-top:56px !important}
+.bigcard{padding:24px 20px !important;border-radius:20px !important;gap:20px !important}
+.shot{height:200px !important}
+.techmap{padding:14px !important;gap:6px !important}
+.techmap span{font-size:12px !important;padding:8px 3px !important}
+.startbox{padding:22px 20px !important}
+#guide article{padding:22px 20px !important}
+.upmeta{flex:1 1 100% !important;flex-direction:row !important;align-items:center;gap:10px !important}
+#updates article{padding:20px !important;gap:10px !important}
+#supporters .bigcard a{width:100%;text-align:center}
+#faq details{padding:16px 18px !important}
+footer{padding:36px 16px !important}
+}
+</style>
+<style>.hdr-sheet[hidden],.hdr-burger svg[hidden]{display:none !important}</style>
+</head>
+<body>
+<div class="page" style="font-family: 'Noto Sans KR', system-ui, sans-serif; color: #22362A; background: #F3F1EA; word-break: keep-all; line-height: 1.6">
+
+<header style="background: #3E6B48; color: #F3F1EA">
+<div class="hdr-in" style="max-width: 1160px; margin: 0 auto; padding: 0 24px; height: 64px; display: flex; align-items: center; gap: 32px">
+<a href="#top" style="display: flex; align-items: baseline; gap: 8px; color: #F3F1EA; text-decoration: none; flex: none"><span style="font-weight: 800; font-size: 22px; letter-spacing: -0.02em">knitup</span><span style="font-family: 'Teolsil', 'Noto Sans KR', sans-serif; font-size: 16px; color: #DDE8D6">뜨개동네</span></a>
+<nav class="hdr-nav" aria-label="주요 메뉴" style="display: flex; gap: 4px; flex: 1; font-size: 15px">
+<a href="#features">기능</a>
+<a href="#guide">사용법</a>
+<a href="#updates">업데이트</a>
+<a href="#faq">자주 묻는 질문</a>
+<a href="#privacy">개인정보 보호</a>
+</nav>
+<button class="hdr-burger" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mnav" style="display: none; margin-left: auto; width: 44px; height: 44px; border: 0; border-radius: 12px; background: transparent; color: #F3F1EA; cursor: pointer; align-items: center; justify-content: center">
+<svg class="ic-x" hidden aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+<svg class="ic-menu" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+</button>
+</div>
+<nav id="mnav" hidden class="hdr-sheet" aria-label="모바일 메뉴" style="background: #F3F1EA; color: #22362A; padding: 8px 16px 20px; border-bottom: 1px solid #E2DFD5">
+<a href="#features">기능</a>
+<a href="#guide">사용법</a>
+<a href="#updates">업데이트 소식</a>
+<a href="#faq">자주 묻는 질문</a>
+<a href="#privacy">개인정보 보호</a>
+</nav>
+</header>
+
+<main>
+<section id="top" style="background: #3E6B48; color: #F3F1EA; padding: 56px 24px 0; overflow: hidden">
+<div style="max-width: 1160px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: flex-end; gap: 48px">
+<div class="hero-tx" style="flex: 1 1 460px; min-width: 0; padding-bottom: 88px">
+<p style="margin: 0 0 16px; display: inline-block; background: #22362A; color: #FFFFFF; font-size: 14px; font-weight: 500; padding: 6px 14px; border-radius: 999px">knitup이 만든 동네 뜨개 커뮤니티</p>
+<h1 style="margin: 0; font-family: 'Teolsil', 'Noto Sans KR', sans-serif; font-weight: 700; font-size: clamp(44px, 6vw, 76px); line-height: 1.15; letter-spacing: -0.01em">우리 동네<br>뜨개 친구를<br>찾아요</h1>
+<p style="margin: 24px 0 0; font-size: 19px; color: #DDE8D6; max-width: 480px">지도에서 가까운 뜨개인을 만나고, 같이 뜰 모임을 열고, 내 뜨개 단계를 한눈에 확인하세요.</p>
+<div id="download" style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 36px">
+<a href="https://apps.apple.com/kr/app/knitup/id6811913066" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; background: #F3F1EA; color: #22362A; text-decoration: none; padding: 14px 22px; border-radius: 14px; font-weight: 700; font-size: 16px; min-height: 44px; box-sizing: border-box">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3c-1.5.2-3 1.3-3.4 3"></path><path d="M12 7c-1.5-1-5-1-6.5 2s-.5 8 2 10.5c1 1 2.2 1 3.2.4.9-.5 1.7-.5 2.6 0 1 .6 2.2.6 3.2-.4 1.3-1.3 2.2-3 2.6-4.5-2-1-2.6-4-.6-5.6-1.5-1.8-4-2-5.5-1Z"></path></svg>
+App Store</a>
+<a href="https://play.google.com/store/apps/details?id=kr.co.firmtech.knitneighbors" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; background: transparent; color: #F3F1EA; text-decoration: none; padding: 14px 22px; border-radius: 14px; font-weight: 700; font-size: 16px; border: 1.5px solid #DDE8D6; min-height: 44px; box-sizing: border-box">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3.5v17l9-8.5-9-8.5Z"></path><path d="M14 12l3.5-3.3 2.8 1.6c1 .6 1 2 0 2.6l-2.8 1.6L14 12Z"></path></svg>
+Google Play</a>
+</div>
+<p style="margin: 14px 0 0; font-size: 14px; color: #DDE8D6">앱스토어·구글 플레이에서 ‘뜨개동네’를 검색하세요</p>
+</div>
+
+<div style="flex: 0 1 340px; min-width: 280px; display: flex; justify-content: center">
+<div class="phone" role="img" aria-label="뜨개동네 앱의 지도 화면 예시" style="width: 300px; height: 560px; color: #22362A; background: #FFFFFF; border: 10px solid #111; border-bottom: 0; border-radius: 44px 44px 0 0; overflow: hidden; display: flex; flex-direction: column">
+<div style="background: #22362A; color: #F3F1EA; padding: 26px 18px 12px">
+<div style="font-family: 'Teolsil', 'Noto Sans KR', sans-serif; font-size: 20px">우리 동네 뜨개 지도</div>
+<div style="height: 2px; width: 120px; background: #DDE8D6; border-radius: 2px; margin-top: 6px"></div>
+</div>
+<div style="display: flex; gap: 6px; padding: 10px 12px; background: #F3F1EA; flex-wrap: wrap">
+<span style="background: #3E6B48; color: #FFFFFF; font-size: 12px; padding: 4px 10px; border-radius: 999px">전체</span>
+<span style="background: #FFFFFF; color: #22362A; font-size: 12px; padding: 4px 10px; border-radius: 999px; border: 1px solid #E2DFD5">친구 찾는 이웃</span>
+<span style="background: #FFFFFF; color: #22362A; font-size: 12px; padding: 4px 10px; border-radius: 999px; border: 1px solid #E2DFD5">모임</span>
+</div>
+<div style="position: relative; flex: 1; background: #FBFBF8; overflow: hidden">
+<div style="position: absolute; left: -20px; right: -20px; top: 120px; height: 14px; background: #FFFFFF; border-top: 1px solid #D3D0C4; border-bottom: 1px solid #D3D0C4; transform: rotate(-8deg)"></div>
+<div style="position: absolute; top: -20px; bottom: -20px; left: 150px; width: 12px; background: #FFFFFF; border-left: 1px solid #D3D0C4; border-right: 1px solid #D3D0C4; transform: rotate(12deg)"></div>
+<div style="position: absolute; left: 24px; top: 200px; width: 96px; height: 70px; background: #DDE8D6; border-radius: 18px"></div>
+<div style="position: absolute; right: -10px; bottom: 40px; width: 120px; height: 90px; background: #EEF0E8; border-radius: 40px"></div>
+<div style="position: absolute; left: 40px; top: 50px; display: flex; flex-direction: column; align-items: center">
+<span style="background: #3E6B48; color: #FFFFFF; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 999px; margin-bottom: 3px">코바늘 3단계</span>
+<span style="width: 38px; height: 38px; border-radius: 50%; background: #FFFFFF; border: 2.5px solid #3E6B48; display: grid; place-items: center; font-weight: 800; font-size: 14px">수</span>
+</div>
+<div style="position: absolute; left: 170px; top: 170px; display: flex; flex-direction: column; align-items: center">
+<span style="background: #FFFFFF; color: #22362A; border: 1.5px solid #3E6B48; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 999px; margin-bottom: 3px">토요일 모임</span>
+<span style="width: 44px; height: 32px; border-radius: 10px; background: #3E6B48; color: #FFFFFF; display: grid; place-items: center; font-weight: 700; font-size: 11px">모임</span>
+</div>
+<div style="position: absolute; left: 70px; top: 300px; display: flex; flex-direction: column; align-items: center">
+<span style="background: #3E6B48; color: #FFFFFF; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 999px; margin-bottom: 3px">대바늘 2단계</span>
+<span style="width: 38px; height: 38px; border-radius: 50%; background: #FFFFFF; border: 2.5px solid #3E6B48; display: grid; place-items: center; font-weight: 800; font-size: 14px">하</span>
+</div>
+<div style="position: absolute; left: 16px; right: 16px; bottom: 16px; background: #FFFFFF; border-radius: 16px; padding: 12px 14px; border: 1px solid #E2DFD5">
+<div style="font-weight: 700; font-size: 14px">일산 토요일 코바늘 모임</div>
+<div style="font-size: 12px; color: #55604F">정발산역 근처 · 4명 참여</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="features" class="sec" style="padding: 96px 24px">
+<div style="max-width: 1160px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px">
+<p style="margin: 0; color: #3E6B48; font-weight: 700; font-size: 15px">기능</p>
+
+<div class="bigcard" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center; background: #FFFFFF; border-radius: 28px; padding: 40px">
+<div style="flex: 1 1 380px; min-width: 0">
+<h2 style="margin: 0 0 12px; font-family: 'Teolsil', 'Noto Sans KR', sans-serif; font-weight: 700; font-size: clamp(28px, 3vw, 38px); line-height: 1.25">지도에서 뜨친 찾기</h2>
+<p style="margin: 0 0 16px; color: #55604F; font-size: 17px">근처 뜨개인·모임·가게가 한 지도에 보여요. 친구를 찾는 중이면 ‘손 들기’로 알릴 수 있어요.</p>
+<p style="margin: 0; display: inline-flex; gap: 8px; align-items: center; background: #DDE8D6; color: #22362A; font-size: 14px; padding: 8px 14px; border-radius: 12px">정확한 위치 대신 약 250m 단위로 흐리게 표시돼요</p>
+</div>
+<div class="shot" style="flex: 1 1 380px; min-width: 0; height: 280px; border-radius: 20px; background: #EAE7DC; display: grid; place-items: center; color: #55604F; font-size: 15px">[지도 화면 캡처]</div>
+</div>
+
+<div class="bigcard" style="display: flex; flex-wrap: wrap-reverse; gap: 40px; align-items: center; background: #FFFFFF; border-radius: 28px; padding: 40px">
+<div class="techmap" style="flex: 1 1 380px; min-width: 0; border-radius: 20px; background: #F3F1EA; padding: 24px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px" aria-label="내 뜨개 단계 기법 맵 예시" role="img">
+<span style="font-size: 12px; color: #55604F">입문</span><span style="font-size: 12px; color: #55604F">초급</span><span style="font-size: 12px; color: #55604F">중급</span><span style="font-size: 12px; color: #55604F">상급</span>
+<span style="background: #3E6B48; color: #FFFFFF; border-radius: 10px; padding: 10px 6px; font-size: 13px; text-align: center">사슬뜨기</span>
+<span style="background: #3E6B48; color: #FFFFFF; border-radius: 10px; padding: 10px 6px; font-size: 13px; text-align: center">긴뜨기</span>
+<span style="background: #FFFFFF; border: 1.5px dashed #3E6B48; border-radius: 10px; padding: 10px 6px; font-size: 13px; text-align: center">팝콘뜨기</span>
+<span style="background: #FFFFFF; border: 1px solid #E2DFD5; color: #55604F; border-radius: 10px; padding: 10px 6px; font-size: 13px; text-align: center">칠보뜨기</span>
+<span style="background: #3E6B48; color: #FFFFFF; border-radius: 10px; padding: 10px 6px; font-size: 13px; text-align: center">짧은뜨기</span>
+<span style="background: #3E6B48; color: #FFFFFF; border-radius: 10px; padding: 10px 6px; font-size: 13px; text-align: center">한길 긴뜨기</span>
+<span style="background: #FFFFFF; border: 1px solid #E2DFD5; color: #55604F; border-radius: 10px; padding: 10px 6px; font-size: 13px; text-align: center">이랑뜨기</span>
+<span style="background: #FFFFFF; border: 1px solid #E2DFD5; color: #55604F; border-radius: 10px; padding: 10px 6px; font-size: 13px; text-align: center">세길 긴뜨기</span>
+</div>
+<div style="flex: 1 1 380px; min-width: 0">
+<h2 style="margin: 0 0 12px; font-family: 'Teolsil', 'Noto Sans KR', sans-serif; font-weight: 700; font-size: clamp(28px, 3vw, 38px); line-height: 1.25">내 뜨개 단계</h2>
+<p style="margin: 0; color: #55604F; font-size: 17px">할 줄 아는 기법을 고르면 기법 맵 위에 내 단계가 표시돼요. 다음에 배울 기법과 먼저 알아야 할 기법도 함께 보여요.</p>
+</div>
+</div>
+
+<div class="bigcard" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center; background: #FFFFFF; border-radius: 28px; padding: 40px">
+<div style="flex: 1 1 380px; min-width: 0">
+<h2 style="margin: 0 0 12px; font-family: 'Teolsil', 'Noto Sans KR', sans-serif; font-weight: 700; font-size: clamp(28px, 3vw, 38px); line-height: 1.25">내 실함</h2>
+<p style="margin: 0; color: #55604F; font-size: 17px">볼밴드 사진을 찍으면 실 이름·색·규격을 읽어 정리해 줘요. 작품을 인증할 때 내 실함에서 고르면 남은 볼 수가 자동으로 줄어요.</p>
+</div>
+<div class="shot" style="flex: 1 1 380px; min-width: 0; height: 280px; border-radius: 20px; background: #EAE7DC; display: grid; place-items: center; color: #55604F; font-size: 15px">[내 실함 화면 캡처]</div>
+</div>
+</div>
+</section>
+
+<section id="guide" class="sec" style="padding: 0 24px 96px">
+<div style="max-width: 1160px; margin: 0 auto">
+<p style="margin: 0; color: #3E6B48; font-weight: 700; font-size: 15px">사용법</p>
+<h2 style="margin: 8px 0 12px; font-family: 'Teolsil', 'Noto Sans KR', sans-serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 42px); line-height: 1.25">처음이라면 여기부터</h2>
+<p style="margin: 0 0 32px; color: #55604F; font-size: 17px">자주 쓰는 기능을 순서대로 안내해요.</p>
+
+<div class="startbox" style="background: #3E6B48; color: #F3F1EA; border-radius: 24px; padding: 32px; margin-bottom: 20px">
+<h3 style="margin: 0 0 20px; font-size: 20px">시작하기</h3>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px">
+<div style="display: flex; gap: 12px; align-items: flex-start"><span style="flex: none; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: #DDE8D6; color: #22362A; font-weight: 800">1</span><p style="margin: 0; font-size: 16px; color: #DDE8D6"><b style="color: #F3F1EA">가입</b><br>구글 또는 애플 계정으로 로그인</p></div>
+<div style="display: flex; gap: 12px; align-items: flex-start"><span style="flex: none; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: #DDE8D6; color: #22362A; font-weight: 800">2</span><p style="margin: 0; font-size: 16px; color: #DDE8D6"><b style="color: #F3F1EA">프로필·동네</b><br>사진, 동네, 닉네임 입력</p></div>
+<div style="display: flex; gap: 12px; align-items: flex-start"><span style="flex: none; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: #DDE8D6; color: #22362A; font-weight: 800">3</span><p style="margin: 0; font-size: 16px; color: #DDE8D6"><b style="color: #F3F1EA">내 뜨개 단계</b><br>할 줄 아는 기법 체크</p></div>
+<div style="display: flex; gap: 12px; align-items: flex-start"><span style="flex: none; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: #DDE8D6; color: #22362A; font-weight: 800">4</span><p style="margin: 0; font-size: 16px; color: #DDE8D6"><b style="color: #F3F1EA">지도 둘러보기</b><br>가까운 이웃과 모임 확인</p></div>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px">
+<article style="background: #FFFFFF; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<span style="align-self: flex-start; background: #DDE8D6; color: #22362A; font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 999px">친구</span>
+<h3 style="margin: 0; font-size: 19px">뜨친 찾는 중 ‘손 들기’</h3>
+<ol style="margin: 0; padding-left: 20px; color: #55604F; font-size: 15px; display: flex; flex-direction: column; gap: 4px"><li>마이 › 설정 › 뜨개 친구 찾기</li><li>손 들기 켜기 (14일 동안)</li><li>지도에 손 든 표시가 떠요</li></ol>
+<a href="#" style="margin-top: auto; font-weight: 700; font-size: 15px">자세히 보기 →</a>
+</article>
+<article style="background: #FFFFFF; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<span style="align-self: flex-start; background: #DDE8D6; color: #22362A; font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 999px">모임</span>
+<h3 style="margin: 0; font-size: 19px">모임 만들기</h3>
+<ol style="margin: 0; padding-left: 20px; color: #55604F; font-size: 15px; display: flex; flex-direction: column; gap: 4px"><li>아래 ＋ 버튼 › 모임</li><li>장소·일정·인원·배울 기법 입력</li><li>게시하면 모임 채팅방이 열려요</li></ol>
+<a href="#" style="margin-top: auto; font-weight: 700; font-size: 15px">자세히 보기 →</a>
+</article>
+<article style="background: #FFFFFF; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<span style="align-self: flex-start; background: #DDE8D6; color: #22362A; font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 999px">작품</span>
+<h3 style="margin: 0; font-size: 19px">작품 인증하기</h3>
+<ol style="margin: 0; padding-left: 20px; color: #55604F; font-size: 15px; display: flex; flex-direction: column; gap: 4px"><li>아래 ＋ 버튼 › 작품 인증</li><li>사진·작품 이름·사용한 기법 입력</li><li>쓴 실은 내 실함에서 골라요</li></ol>
+<a href="#" style="margin-top: auto; font-weight: 700; font-size: 15px">자세히 보기 →</a>
+</article>
+<article style="background: #FFFFFF; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<span style="align-self: flex-start; background: #DDE8D6; color: #22362A; font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 999px">실</span>
+<h3 style="margin: 0; font-size: 19px">내 실함에 실 담기</h3>
+<ol style="margin: 0; padding-left: 20px; color: #55604F; font-size: 15px; display: flex; flex-direction: column; gap: 4px"><li>마이 › 내 실함</li><li>볼밴드 사진 찍기</li><li>읽어 준 이름·색·규격 확인 후 저장</li></ol>
+<a href="#" style="margin-top: auto; font-weight: 700; font-size: 15px">자세히 보기 →</a>
+</article>
+<article style="background: #FFFFFF; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<span style="align-self: flex-start; background: #DDE8D6; color: #22362A; font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 999px">단계</span>
+<h3 style="margin: 0; font-size: 19px">내 뜨개 단계 바꾸기</h3>
+<ol style="margin: 0; padding-left: 20px; color: #55604F; font-size: 15px; display: flex; flex-direction: column; gap: 4px"><li>마이 › 내 뜨개 단계 카드</li><li>새로 익힌 기법 체크</li><li>단계가 자동으로 바뀌어요</li></ol>
+<a href="#" style="margin-top: auto; font-weight: 700; font-size: 15px">자세히 보기 →</a>
+</article>
+<article style="background: #F3F1EA; border: 1.5px dashed #3E6B48; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px; justify-content: center">
+<h3 style="margin: 0; font-size: 19px">궁금한 게 더 있나요?</h3>
+<p style="margin: 0; color: #55604F; font-size: 15px">앱의 마이 › 설정 › 지기에게 말하기로 물어보세요.</p>
+<a href="#faq" style="font-weight: 700; font-size: 15px">자주 묻는 질문 보기 →</a>
+</article>
+</div>
+</div>
+</section>
+
+<section id="updates" class="sec" style="padding: 0 24px 96px">
+<div style="max-width: 1160px; margin: 0 auto">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 12px; margin-bottom: 28px">
+<div>
+<p style="margin: 0; color: #3E6B48; font-weight: 700; font-size: 15px">업데이트 소식</p>
+<h2 style="margin: 8px 0 0; font-family: 'Teolsil', 'Noto Sans KR', sans-serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 42px); line-height: 1.25">새로 바뀐 것들</h2>
+</div>
+<a href="#" style="font-weight: 700; font-size: 15px">전체 업데이트 보기 →</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<article style="background: #FFFFFF; border-radius: 20px; padding: 24px 28px; display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start">
+<div class="upmeta" style="flex: 0 0 140px; display: flex; flex-direction: column; gap: 6px">
+<span style="align-self: flex-start; background: #22362A; color: #FFFFFF; font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 999px">NEW · v1.0.3</span>
+<span style="font-size: 14px; color: #55604F">[날짜]</span>
+</div>
+<div style="flex: 1 1 400px; min-width: 0">
+<h3 style="margin: 0 0 6px; font-size: 19px">커뮤니티 맨 위에 공지 카드가 생겼어요</h3>
+<p style="margin: 0; color: #55604F; font-size: 15px">운영 소식을 커뮤니티 첫 화면에서 바로 볼 수 있어요. 닫으면 다음 공지 전까지 보이지 않아요.</p>
+</div>
+</article>
+<article style="background: #FFFFFF; border-radius: 20px; padding: 24px 28px; display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start">
+<div class="upmeta" style="flex: 0 0 140px; display: flex; flex-direction: column; gap: 6px">
+<span style="align-self: flex-start; background: #DDE8D6; color: #22362A; font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 999px">[버전]</span>
+<span style="font-size: 14px; color: #55604F">[날짜]</span>
+</div>
+<div style="flex: 1 1 400px; min-width: 0">
+<h3 style="margin: 0 0 6px; font-size: 19px">[업데이트 제목]</h3>
+<p style="margin: 0; color: #55604F; font-size: 15px">[바뀐 내용 한두 줄]</p>
+</div>
+</article>
+<article style="background: #FFFFFF; border-radius: 20px; padding: 24px 28px; display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start">
+<div class="upmeta" style="flex: 0 0 140px; display: flex; flex-direction: column; gap: 6px">
+<span style="align-self: flex-start; background: #DDE8D6; color: #22362A; font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 999px">[버전]</span>
+<span style="font-size: 14px; color: #55604F">[날짜]</span>
+</div>
+<div style="flex: 1 1 400px; min-width: 0">
+<h3 style="margin: 0 0 6px; font-size: 19px">[업데이트 제목]</h3>
+<p style="margin: 0; color: #55604F; font-size: 15px">[바뀐 내용 한두 줄]</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<section id="supporters" class="sec" style="padding: 0 24px 96px">
+<div class="bigcard" style="max-width: 1160px; margin: 0 auto; background: #3E6B48; color: #FFFFFF; border-radius: 28px; padding: 48px 40px; display: flex; flex-wrap: wrap; gap: 32px; align-items: center; justify-content: space-between">
+<div style="flex: 1 1 420px; min-width: 0">
+<p style="margin: 0; font-weight: 700; font-size: 15px; color: #DDE8D6">1기 서포터즈 모집</p>
+<h2 style="margin: 8px 0 12px; font-family: 'Teolsil', 'Noto Sans KR', sans-serif; font-weight: 700; font-size: clamp(28px, 3vw, 38px); line-height: 1.25">뜨개동네를 같이 만들어요</h2>
+<p style="margin: 0; font-size: 17px; color: #F3F1EA">2개월 동안 앱을 쓰며 의견을 들려주세요. 활동은 포인트로 쌓이고, 등급에 따라 뱃지·knitup 매거진·레벨업쿠션·실 키트를 드려요.</p>
+</div>
+<a href="#download" style="background: #22362A; color: #FFFFFF; text-decoration: none; font-weight: 700; font-size: 16px; padding: 14px 26px; border-radius: 999px; min-height: 44px; box-sizing: border-box">앱에서 신청하기</a>
+</div>
+</section>
+
+<section id="faq" class="sec" style="padding: 0 24px 96px">
+<div style="max-width: 820px; margin: 0 auto">
+<h2 style="margin: 0 0 24px; font-family: 'Teolsil', 'Noto Sans KR', sans-serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 42px); line-height: 1.25">자주 묻는 질문</h2>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<details style="background: #FFFFFF; border-radius: 16px; padding: 20px 24px">
+<summary style="font-weight: 700; font-size: 17px">어떻게 설치하나요?</summary>
+<p style="margin: 10px 0 0; color: #55604F">App Store 또는 Google Play에서 ‘뜨개동네’를 검색해 설치하세요.</p>
+</details>
+<details style="background: #FFFFFF; border-radius: 16px; padding: 20px 24px">
+<summary style="font-weight: 700; font-size: 17px">내 위치가 그대로 보이나요?</summary>
+<p style="margin: 10px 0 0; color: #55604F">아니요. 정확한 좌표는 저장하지 않고 약 250m 단위로 흐린 위치만 지도에 보여요. 지도 공개도 직접 끌 수 있어요.</p>
+</details>
+<details style="background: #FFFFFF; border-radius: 16px; padding: 20px 24px">
+<summary style="font-weight: 700; font-size: 17px">초보도 쓸 수 있나요?</summary>
+<p style="margin: 10px 0 0; color: #55604F">네. 내 뜨개 단계로 비슷한 수준의 이웃과 모임을 찾을 수 있어요.</p>
+</details>
+<details style="background: #FFFFFF; border-radius: 16px; padding: 20px 24px">
+<summary style="font-weight: 700; font-size: 17px">이용료가 있나요?</summary>
+<p style="margin: 10px 0 0; color: #55604F">[확인 후 입력]</p>
+</details>
+</div>
+</div>
+</section>
+
+<section id="privacy" class="sec" style="padding: 0 24px 96px">
+<div class="bigcard" style="max-width: 1160px; margin: 0 auto; background: #FFFFFF; border-radius: 28px; padding: 48px 40px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 32px">
+<div style="flex: 1 1 520px; min-width: 0">
+<p style="margin: 0; color: #3E6B48; font-weight: 700; font-size: 15px">개인정보 보호</p>
+<h2 style="margin: 8px 0 10px; font-family: 'Teolsil', 'Noto Sans KR', sans-serif; font-weight: 700; font-size: clamp(28px, 3vw, 38px); line-height: 1.25">동네는 가깝게, 내 정보는 안전하게</h2>
+<p style="margin: 0; color: #55604F; font-size: 16px">이웃을 만나는 앱이라 위치와 연락에 특히 조심하고 있어요. 지금 이렇게 지키고 있습니다.</p>
+</div>
+<a href="privacy.html" style="font-weight: 700; font-size: 15px">개인정보처리방침 전문 →</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px">
+<div style="background: #F3F1EA; border-radius: 18px; padding: 22px 24px">
+<h3 style="margin: 0 0 6px; font-size: 17px">정확한 위치는 저장하지 않아요</h3>
+<p style="margin: 0; color: #55604F; font-size: 15px">지도에는 약 250m 단위로 흐린 위치만 보여요. 지도 공개는 언제든 직접 끌 수 있어요.</p>
+</div>
+<div style="background: #F3F1EA; border-radius: 18px; padding: 22px 24px">
+<h3 style="margin: 0 0 6px; font-size: 17px">채팅은 읽지 않아요</h3>
+<p style="margin: 0; color: #55604F; font-size: 15px">운영진과 운영 AI는 신고된 메시지 한 건만 확인해요. 그 밖의 대화는 열어 보지 않아요.</p>
+</div>
+<div style="background: #F3F1EA; border-radius: 18px; padding: 22px 24px">
+<h3 style="margin: 0 0 6px; font-size: 17px">배송지는 필요할 때만, 짧게</h3>
+<p style="margin: 0; color: #55604F; font-size: 15px">이벤트에 선정된 분만 입력하고 운영진만 봐요. 발송 30일 뒤 자동으로 지워져요.</p>
+</div>
+<div style="background: #F3F1EA; border-radius: 18px; padding: 22px 24px">
+<h3 style="margin: 0 0 6px; font-size: 17px">광고 측정에 개인정보는 보내지 않아요</h3>
+<p style="margin: 0; color: #55604F; font-size: 15px">광고 효과 측정(Meta)에는 가입·모임 참여 같은 앱 이용 기록과 기기 식별자만 쓰고, 이메일·닉네임·위치는 넣지 않아요.</p>
+</div>
+<div style="background: #F3F1EA; border-radius: 18px; padding: 22px 24px">
+<h3 style="margin: 0 0 6px; font-size: 17px">운영진 열람은 기록으로 남아요</h3>
+<p style="margin: 0; color: #55604F; font-size: 15px">회원 정보는 본인만 고칠 수 있어요. 운영진이 이메일·배송지 같은 정보를 조회하면 접근 기록이 남아요.</p>
+</div>
+<div style="background: #F3F1EA; border-radius: 18px; padding: 22px 24px">
+<h3 style="margin: 0 0 6px; font-size: 17px">탈퇴하면 20일 뒤 완전히 삭제</h3>
+<p style="margin: 0; color: #55604F; font-size: 15px">마음이 바뀌면 20일 안에 다시 로그인해 되살릴 수 있어요. 그 뒤에는 계정과 사진이 모두 지워져요.</p>
+</div>
+</div>
+<p style="margin: 24px 0 0; color: #55604F; font-size: 14px">앱 안에서 결제 정보는 받지 않아요. 내 실함 정보는 실 데이터 정리를 위해 운영진이 볼 수 있어요. 개인정보 문의: <a href="mailto:knitup.official@gmail.com">knitup.official@gmail.com</a></p>
+</div>
+</section>
+
+</main>
+
+<footer style="background: #3E6B48; color: #DDE8D6; padding: 48px 24px">
+<div style="max-width: 1160px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: flex-start">
+<div>
+<div style="display: flex; align-items: baseline; gap: 8px; color: #F3F1EA"><span style="font-weight: 800; font-size: 24px; letter-spacing: -0.02em">knitup</span><span style="font-family: 'Teolsil', 'Noto Sans KR', sans-serif; font-size: 18px; color: #DDE8D6">뜨개동네</span></div>
+<p style="margin: 8px 0 0; font-size: 14px">knitup · 펌테크 주식회사</p>
+</div>
+<nav aria-label="법적 고지" style="display: flex; gap: 20px; flex-wrap: wrap; font-size: 14px">
+<a href="privacy.html" style="color: #DDE8D6">개인정보처리방침</a>
+<a href="terms.html" style="color: #DDE8D6">이용약관</a>
+<a href="support.html" style="color: #DDE8D6">고객 지원</a>
+</nav>
+</div>
+</footer>
+
+</div>
+<script>
+(function(){
+  var b=document.querySelector('.hdr-burger'), m=document.getElementById('mnav');
+  if(!b||!m) return;
+  var x=b.querySelector('.ic-x'), h=b.querySelector('.ic-menu');
+  function set(open){ m.hidden=!open; x.toggleAttribute('hidden', !open); h.toggleAttribute('hidden', open); b.setAttribute('aria-expanded', open); b.setAttribute('aria-label', open?'메뉴 닫기':'메뉴 열기'); }
+  b.addEventListener('click', function(){ set(m.hidden); });
+  m.addEventListener('click', function(e){ if(e.target.closest('a')) set(false); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') set(false); });
+})();
+</script>
+</body>
+</html>
