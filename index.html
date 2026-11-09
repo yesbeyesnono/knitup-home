@@ -22,6 +22,9 @@ details summary::-webkit-details-marker{display:none}
 .pv-chev{flex:none;color:#3E6B48;transition:transform .2s}
 .pv[open] .pv-chev{transform:rotate(180deg)}
 header{position:sticky;top:0;z-index:20}
+.wave-hand{transform-origin:70% 90%;animation:wave 1.6s ease-in-out infinite}
+@keyframes wave{0%,60%,100%{transform:rotate(0)}15%{transform:rotate(14deg)}30%{transform:rotate(-8deg)}45%{transform:rotate(10deg)}}
+@media (prefers-reduced-motion:reduce){.wave-hand{animation:none}}
 html{scroll-behavior:smooth}
 [id]{scroll-margin-top:80px}
 #download{scroll-margin-top:120px}
@@ -204,7 +207,10 @@ Google Play</a>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px">
 <article style="background: #FFFFFF; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
 <span style="align-self: flex-start; background: #DDE8D6; color: #22362A; font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 999px">친구</span>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
 <h3 style="margin: 0; font-size: 19px">뜨친 찾는 중 ‘손 들기’</h3>
+<span style="flex: none; width: 52px; height: 52px; border-radius: 50%; background: #DDE8D6; border: 2px solid #3E6B48; display: grid; place-items: center; color: #3E6B48"><svg class="wave-hand" role="img" aria-label="손 든 표시" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12.5V5.6a1.4 1.4 0 0 1 2.8 0V11"></path><path d="M10.8 11V4.4a1.4 1.4 0 0 1 2.8 0V11"></path><path d="M13.6 11V5.6a1.4 1.4 0 0 1 2.8 0v6.6"></path><path d="M16.4 12.2v-.8a1.4 1.4 0 0 1 2.8 0v4.1a6 6 0 0 1-6 6h-1.6a6 6 0 0 1-5-2.7l-2.4-4.1a1.45 1.45 0 0 1 2.45-1.55L8 15v-2.5"></path><path stroke="#F0A868" d="M4.4 8.4C3.5 6.9 3.5 5 4.4 3.5"></path></svg></span>
+</div>
 <ol style="margin: 0; padding-left: 20px; color: #55604F; font-size: 15px; display: flex; flex-direction: column; gap: 4px"><li>마이 › 설정 › 뜨개 친구 찾기</li><li>손 들기 켜기 (14일 동안)</li><li>지도에 손 든 표시가 떠요</li></ol>
 </article>
 <article style="background: #FFFFFF; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
@@ -356,7 +362,7 @@ Google Play</a>
 <div style="max-width: 1160px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: flex-start">
 <div>
 <div style="display: flex; align-items: baseline; gap: 8px; color: #F3F1EA"><span style="font-weight: 800; font-size: 24px; letter-spacing: -0.02em">knitup</span><span style="font-family: 'Teolsil', 'Noto Sans KR', sans-serif; font-size: 18px; color: #DDE8D6">뜨개동네</span></div>
-<p style="margin: 8px 0 0; font-size: 14px">knitup · 펌테크 주식회사</p>
+<address style="margin: 12px 0 0; font-style: normal; font-size: 13px; line-height: 1.8; color: #DDE8D6"><span style="white-space: nowrap">상호 펌테크 주식회사</span> · <span style="white-space: nowrap">대표 박영재</span> · <span style="white-space: nowrap">사업자등록번호 667-81-03643</span><br>주소 경기도 고양시 일산서구 킨텍스로 255, 104-1308<br><span style="white-space: nowrap">전화 <a href="tel:031-994-7414" style="color: #DDE8D6">031-994-7414</a></span> · 이메일 <a href="mailto:knitup.official@gmail.com" style="color: #DDE8D6">knitup.official@gmail.com</a> · <span style="white-space: nowrap">호스팅 GitHub</span></address>
 </div>
 <nav aria-label="법적 고지" style="display: flex; gap: 20px; flex-wrap: wrap; font-size: 14px">
 <a href="privacy.html" style="color: #FFFFFF; font-weight: 700">개인정보 처리방침</a>
