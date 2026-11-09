@@ -19,6 +19,8 @@ body{margin:0;background:#F3F1EA}
 a{color:#3E6B48}a:hover{color:#22362A}
 details summary{cursor:pointer;list-style:none}
 details summary::-webkit-details-marker{display:none}
+.pv-chev{flex:none;color:#3E6B48;transition:transform .2s}
+.pv[open] .pv-chev{transform:rotate(180deg)}
 header{position:sticky;top:0;z-index:20}
 html{scroll-behavior:smooth}
 [id]{scroll-margin-top:80px}
@@ -324,31 +326,31 @@ Google Play</a>
 </div>
 <a href="privacy.html" style="font-weight: 700; font-size: 15px">개인정보처리방침 전문 →</a>
 </div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px">
-<div style="background: #F3F1EA; border-radius: 18px; padding: 22px 24px">
-<h3 style="margin: 0 0 6px; font-size: 17px">정확한 위치는 저장하지 않아요</h3>
-<p style="margin: 0; color: #55604F; font-size: 15px">지도에는 약 250m 단위로 흐린 위치만 보여요. 지도 공개는 언제든 직접 끌 수 있어요.</p>
-</div>
-<div style="background: #F3F1EA; border-radius: 18px; padding: 22px 24px">
-<h3 style="margin: 0 0 6px; font-size: 17px">채팅은 읽지 않아요</h3>
-<p style="margin: 0; color: #55604F; font-size: 15px">운영진과 운영 AI는 신고된 메시지 한 건만 확인해요. 그 밖의 대화는 열어 보지 않아요.</p>
-</div>
-<div style="background: #F3F1EA; border-radius: 18px; padding: 22px 24px">
-<h3 style="margin: 0 0 6px; font-size: 17px">배송지는 필요할 때만, 짧게</h3>
-<p style="margin: 0; color: #55604F; font-size: 15px">이벤트에 선정된 분만 입력하고 운영진만 봐요. 발송 30일 뒤 자동으로 지워져요.</p>
-</div>
-<div style="background: #F3F1EA; border-radius: 18px; padding: 22px 24px">
-<h3 style="margin: 0 0 6px; font-size: 17px">광고 측정에 개인정보는 보내지 않아요</h3>
-<p style="margin: 0; color: #55604F; font-size: 15px">광고 효과 측정(Meta)에는 가입·모임 참여 같은 앱 이용 기록과 기기 식별자만 쓰고, 이메일·닉네임·위치는 넣지 않아요.</p>
-</div>
-<div style="background: #F3F1EA; border-radius: 18px; padding: 22px 24px">
-<h3 style="margin: 0 0 6px; font-size: 17px">운영진 열람은 기록으로 남아요</h3>
-<p style="margin: 0; color: #55604F; font-size: 15px">회원 정보는 본인만 고칠 수 있어요. 운영진이 이메일·배송지 같은 정보를 조회하면 접근 기록이 남아요.</p>
-</div>
-<div style="background: #F3F1EA; border-radius: 18px; padding: 22px 24px">
-<h3 style="margin: 0 0 6px; font-size: 17px">탈퇴하면 20일 뒤 완전히 삭제</h3>
-<p style="margin: 0; color: #55604F; font-size: 15px">마음이 바뀌면 20일 안에 다시 로그인해 되살릴 수 있어요. 그 뒤에는 계정과 사진이 모두 지워져요.</p>
-</div>
+<div style="border-top: 1px solid #E2DFD5">
+<details class="pv" style="border-bottom: 1px solid #E2DFD5">
+<summary style="display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 56px; font-weight: 700; font-size: 17px">정확한 위치는 저장하지 않아요<svg class="pv-chev" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<p style="margin: 0 0 18px; color: #55604F; font-size: 15px">지도에는 약 250m 단위로 흐린 위치만 보여요. 지도 공개는 언제든 직접 끌 수 있어요.</p>
+</details>
+<details class="pv" style="border-bottom: 1px solid #E2DFD5">
+<summary style="display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 56px; font-weight: 700; font-size: 17px">채팅은 읽지 않아요<svg class="pv-chev" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<p style="margin: 0 0 18px; color: #55604F; font-size: 15px">운영진과 운영 AI는 신고된 메시지 한 건만 확인해요. 그 밖의 대화는 열어 보지 않아요.</p>
+</details>
+<details class="pv" style="border-bottom: 1px solid #E2DFD5">
+<summary style="display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 56px; font-weight: 700; font-size: 17px">배송지는 필요할 때만, 짧게<svg class="pv-chev" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<p style="margin: 0 0 18px; color: #55604F; font-size: 15px">이벤트에 선정된 분만 입력하고 운영진만 봐요. 발송 30일 뒤 자동으로 지워져요.</p>
+</details>
+<details class="pv" style="border-bottom: 1px solid #E2DFD5">
+<summary style="display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 56px; font-weight: 700; font-size: 17px">광고 측정에 개인정보는 보내지 않아요<svg class="pv-chev" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<p style="margin: 0 0 18px; color: #55604F; font-size: 15px">광고 효과 측정(Meta)에는 가입·모임 참여 같은 앱 이용 기록과 기기 식별자만 쓰고, 이메일·닉네임·위치는 넣지 않아요.</p>
+</details>
+<details class="pv" style="border-bottom: 1px solid #E2DFD5">
+<summary style="display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 56px; font-weight: 700; font-size: 17px">운영진 열람은 기록으로 남아요<svg class="pv-chev" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<p style="margin: 0 0 18px; color: #55604F; font-size: 15px">회원 정보는 본인만 고칠 수 있어요. 운영진이 이메일·배송지 같은 정보를 조회하면 접근 기록이 남아요.</p>
+</details>
+<details class="pv" style="border-bottom: 1px solid #E2DFD5">
+<summary style="display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 56px; font-weight: 700; font-size: 17px">탈퇴하면 20일 뒤 완전히 삭제<svg class="pv-chev" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<p style="margin: 0 0 18px; color: #55604F; font-size: 15px">마음이 바뀌면 20일 안에 다시 로그인해 되살릴 수 있어요. 그 뒤에는 계정과 사진이 모두 지워져요.</p>
+</details>
 </div>
 <p style="margin: 24px 0 0; color: #55604F; font-size: 14px">앱 안에서 결제 정보는 받지 않아요. 내 실함 정보는 실 데이터 정리를 위해 운영진이 볼 수 있어요. 개인정보 문의: <a href="mailto:knitup.official@gmail.com">knitup.official@gmail.com</a></p>
 </div>
@@ -363,11 +365,12 @@ Google Play</a>
 <p style="margin: 8px 0 0; font-size: 14px">knitup · 펌테크 주식회사</p>
 </div>
 <nav aria-label="법적 고지" style="display: flex; gap: 20px; flex-wrap: wrap; font-size: 14px">
-<a href="privacy.html" style="color: #DDE8D6">개인정보처리방침</a>
+<a href="privacy.html" style="color: #FFFFFF; font-weight: 700">개인정보 처리방침</a>
 <a href="terms.html" style="color: #DDE8D6">이용약관</a>
 <a href="support.html" style="color: #DDE8D6">고객 지원</a>
 </nav>
 </div>
+<p style="max-width: 1160px; margin: 32px auto 0; padding-top: 20px; border-top: 1px solid rgba(221,232,214,.25); font-size: 13px; color: #DDE8D6">© 2026 펌테크 주식회사. All rights reserved.</p>
 </footer>
 
 </div>
