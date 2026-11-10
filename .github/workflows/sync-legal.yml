@@ -1,0 +1,41 @@
+# 약관·개인정보처리방침 등 문서 5개는 앱 저장소(yesbeyesnono/knit-neighbors 의 docs/)가 원본이다.
+# 이 저장소에서는 직접 고치지 않는다 — 매일 한 번(03:10 KST) + 수동 실행으로 가져와 덮어쓴다.
+# 수동 실행: gh workflow run sync-legal.yml -R yesbeyesnono/knitup-home
+name: sync-legal
+on:
+  schedule:
+    - cron: '10 18 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 앱 저장소에서 문서 가져오기
+        run: |
+          set -e
+          for f in privacy terms guidelines support delete-account; do
+            curl -fsSL "https://raw.githubusercontent.com/yesbeyesnono/knit-neighbors/main/docs/$f.html" -o "/tmp/$f.html"
+            # 비었거나 HTML 이 아니면 덮어쓰지 않는다
+            test "$(wc -c < /tmp/$f.html)" -gt 1000
+            grep -qi '<html' "/tmp/$f.html"
+            cp "/tmp/$f.html" "$f.html"
+          done
+      - name: 바뀐 것이 있으면 커밋
+        id: commit
+        run: |
+          if git diff --quiet; then echo "changed=false" >> "$GITHUB_OUTPUT"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add privacy.html terms.html guidelines.html support.html delete-account.html
+          git commit -m "문서 동기화: knit-neighbors/docs → 홈페이지(자동)"
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+      - name: 홈페이지 다시 올리기 요청
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds" || true
